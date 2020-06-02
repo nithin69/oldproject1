@@ -1,0 +1,26 @@
+from django.conf.urls import patterns, url, include
+from lab import models, views
+from django.conf import settings
+from django.contrib import admin
+admin.autodiscover()
+
+
+
+urlpatterns = patterns('',
+                url(r'^$', views.index, name='index'),
+
+                url(r'^about/$', views.about, name='about'),
+     		#url(r'^email/$',views.email,name='email'),
+    		#url(r'^thanks/$',views.thanks,name='thanks'),
+                url(r'^research/$', views.research, name='research'),
+                url(r'^gallery/$', views.gallery, name='gallery'),       
+                url(r'^contactus/$', views.contact_form, name='contact_form'),
+                url(r'^marine/$', views.marine, name='marine'),
+                #url(r'^civil-video/$', views.civil_videos, name='civil_videos'),
+                url(r'^civil/$', views.civil, name='civil'),       
+                url(r'^biological/$', views.biological, name='biological'),
+                #url(r'^medical/$', views.medical, name='medical'),
+		#url(r'^biological_inner/$', views.biological_inner, name='biological_inner'),
+                #url(r'^marine_inner/$', views.marine_inner, name='marine_inner'),
+		      
+)
